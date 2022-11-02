@@ -28,7 +28,18 @@
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="Person"/>
+                    <materialDesign:PackIcon Kind="Person"
+                                             Margin="0 5 2 0"/>
+                    <TextBox materialDesign:HintAssist.Hint="{Binding Path=LoginHint}"
+                             Width="120"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 5 0 0">
+                    <materialDesign:PackIcon Kind="Key"
+                                             Margin="0 5 2 0"/>
+                    <PasswordBox materialDesign:HintAssist.Hint="{Binding Path=PasswordHint}"
+                             Width="120"/>
                 </StackPanel>
             </StackPanel>
         </Border>
