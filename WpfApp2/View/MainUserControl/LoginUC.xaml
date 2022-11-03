@@ -47,7 +47,7 @@
             VerticalAlignment="Top"
             Click="Button_Click"
             Cursor="Hand"
-            Style="{StaticResource MaterialDesignIconButton}">
+            Style="{StaticResource MaterialDesignIconForegroundButton}">
             <materialDesign:PackIcon Foreground="White" Kind="Close" />
         </Button>
         <Border
