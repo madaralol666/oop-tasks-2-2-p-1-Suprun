@@ -5,8 +5,85 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfApp2.View.MainUserControl"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    d:DesignHeight="600"
+    d:DesignWidth="500"
     mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="450"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="/Images/ui-bg-green.jpg"
+               Grid.RowSpan="3"
+               Stretch="UniformToFill"/>
+
+        <!--ЧТО ДЕЛАТЬ? Binding Path kak?-->
+        <Border
+            Width="150"
+            Height="40"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#FFF6F8F4"
+            CornerRadius="20">
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="25"
+                Foreground="#FF7BCE49"
+                Text="Profile" />
+        </Border>
+        <Button
+            Grid.Row="0"
+            Margin="0,5,0,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="Button_Click"
+            Style="{StaticResource MaterialDesignIconButton}">
+            <materialDesign:PackIcon Foreground="White" Kind="Close" />
+        </Button>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Vertical"
+                    Grid.Row="1">
+            <Image Source="/Images/user-image.jpeg" 
+                   Width="180"
+                   Margin="0 0 0 30"
+                   VerticalAlignment="Top"/>
+            <TextBlock Text="Login"
+                       Margin="0 0 0 5"
+                       FontWeight="Bold"
+                       FontSize="14"/>
+            <TextBlock Text="Name LastName"
+                       Margin="0 0 0 5"/>
+            <TextBlock Text="Age"
+                       Margin="0 0 0 5"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 5 0 0">
+                <materialDesign:PackIcon Kind="Clock"
+                                         Margin="0 0 2 0"/>
+                <TextBlock Text="RegistrationDate"/>
+            </StackPanel>
+        </StackPanel>
+        <Border
+            Width="150"
+            Height="40"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#FFF6F8F4"
+            CornerRadius="20"
+            Grid.Row="2">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <materialDesign:PackIcon Kind="SignOut"/>
+                <Button>
+                    
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
 </UserControl>
