@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop-net-tasks-2-2-p-1-Suprun", "oop-tasks-2-2-p-1-Suprun\oop-net-tasks-2-2-p-1-Suprun.csproj", "{816C27B7-044F-4C57-811E-0AD03081AB12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oop-net-tasks-2-2-p-1-Suprun", "oop-tasks-2-2-p-1-Suprun\oop-net-tasks-2-2-p-1-Suprun.csproj", "{816C27B7-044F-4C57-811E-0AD03081AB12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop-tasks-framework-2-2-p-1-Suprun", "oop-tasks-framework-2-2-p-1-Suprun\oop-tasks-framework-2-2-p-1-Suprun.csproj", "{E0D1FC7E-5CD2-40D2-B4D6-5FC5F9BC3DDD}"
 EndProject

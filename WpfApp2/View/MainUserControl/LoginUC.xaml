@@ -63,31 +63,41 @@
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon
+                        Width="21"
+                        Height="21"
                         Margin="0,2,2,0"
                         Foreground="LightBlue"
                         Kind="Person" />
                     <TextBox
                         Width="120"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         materialDesign:HintAssist.Hint="{Binding Path=LoginHint}"
                         BorderBrush="LightBlue"
+                        FontSize="16"
                         Foreground="Gray" />
                 </StackPanel>
 
-                <StackPanel Margin="0,5,0,5" Orientation="Horizontal">
+                <StackPanel Margin="0,5,0,7" Orientation="Horizontal">
                     <materialDesign:PackIcon
+                        Width="21"
+                        Height="21"
                         Margin="0,2,2,0"
                         Foreground="LightBlue"
                         Kind="Key" />
                     <PasswordBox
                         Width="120"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         materialDesign:HintAssist.Hint="{Binding Path=PasswordHint}"
                         BorderBrush="LightBlue"
+                        FontSize="16"
                         Foreground="Gray" />
                 </StackPanel>
                 <Button
                     x:Name="SignInBtn"
-                    Width="100"
-                    Height="17"
+                    Width="83"
+                    Height="18"
                     Margin="0,0,0,1"
                     Padding="0"
                     HorizontalAlignment="Center"
@@ -96,7 +106,7 @@
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Login" />
                         <TextBlock
-                            Margin="5,1,0,0"
+                            Margin="2,1,0,0"
                             VerticalAlignment="Center"
                             FontSize="15"
                             Text="Sign in" />
@@ -106,7 +116,8 @@
                     Height="15"
                     Padding="0"
                     HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignFlatButton}">
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                        Cursor="Hand">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Width="10"
@@ -115,13 +126,14 @@
                         <TextBlock
                             Margin="1,1,0,0"
                             VerticalAlignment="Center"
-                            FontSize="10"
+                            FontSize="8"
                             Foreground="Gray"
                             Text="Sign up"
                             TextDecorations="Underline" />
                     </StackPanel>
                 </Button>
             </StackPanel>
+
         </Border>
     </Grid>
 </UserControl>
