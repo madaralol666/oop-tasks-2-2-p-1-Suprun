@@ -17,8 +17,8 @@ namespace WpfApp2.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameElement));
         }
 
-        private string _loginField;
 
+        private string _loginField;
         public string LoginField
         {
             get => _loginField; 
@@ -28,8 +28,9 @@ namespace WpfApp2.ViewModel
                 OnPropertyChanged();
             }
         }
-        private string _passwordField;
 
+
+        private string _passwordField;
         public string PasswordField
         {
             get => _passwordField;
@@ -38,20 +39,53 @@ namespace WpfApp2.ViewModel
                 OnPropertyChanged();
             }
         }
-        private string _loginHint = "Login";
 
+
+        private string _ageField;
+        public string AgeField
+        {
+            get => _ageField;
+            set { _ageField = value; OnPropertyChanged(); }
+        }
+
+
+        private string _lastNameField;
+        public string LastNameField
+        {
+            get => _lastNameField;
+            set { _lastNameField = value; OnPropertyChanged(); }
+        }
+
+
+        private string _loginHint = "Login";
         public string LoginHint
         {
             get => _loginHint;
             set { _loginHint = value; OnPropertyChanged(); }
         }
-        private string _passwordHint = "Password";
 
+
+        private string _passwordHint = "Password";
         public string PasswordHint
         {
             get => _passwordHint;
             set { _passwordHint = value; OnPropertyChanged(); }
         }
 
+
+        private string _ageHint = "Age";
+        public string AgeHint
+        {
+            get => _ageHint;
+            set { _ageHint = value; OnPropertyChanged(); }
+        }
+
+
+        private string _lastNameHint = "Last name";
+        public string LastNameHint
+        {
+            get => _lastNameHint;
+            set { _lastNameHint = value; OnPropertyChanged(); }
+        }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.Core;
 using WpfApp2.ViewModel;
 
 namespace WpfApp2.View.MainUserControl
@@ -25,6 +26,16 @@ namespace WpfApp2.View.MainUserControl
         {
             InitializeComponent();
             DataContext = viewModel;
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Frame.GoBack();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
