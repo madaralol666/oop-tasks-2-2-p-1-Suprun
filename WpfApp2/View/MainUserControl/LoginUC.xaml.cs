@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp2.Core;
+using WpfApp2.ViewModel;
 
 namespace WpfApp2.View.MainUserControl
 {
@@ -21,9 +22,11 @@ namespace WpfApp2.View.MainUserControl
     /// </summary>
     public partial class LoginUC : UserControl
     {
+        private LoginUCViewModel viewModel = null;
         public LoginUC()
         {
             InitializeComponent();
+            viewModel = (LoginUCViewModel)Resources["viewModel"];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,7 +41,7 @@ namespace WpfApp2.View.MainUserControl
 
         private void SignUpBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.Frame.Navigate(new SignUpUserControl());
+            MyFrame.Frame.Navigate(new SignUpUserControl(viewModel));
         }
     }
 }

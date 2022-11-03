@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.ViewModel;
 
 namespace WpfApp2.View.MainUserControl
 {
@@ -20,9 +21,10 @@ namespace WpfApp2.View.MainUserControl
     /// </summary>
     public partial class SignUpUserControl : UserControl
     {
-        public SignUpUserControl()
+        public SignUpUserControl(LoginUCViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
         }
     }
 }
