@@ -35,9 +35,8 @@
                 Grid.Row="0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Effect="{StaticResource MaterialDesignElevationShadow1}"
                 FontSize="25"
-                Foreground="White"
+                Foreground="DeepSkyBlue"
                 Text="auth" />
         </Border>
 
@@ -66,14 +65,14 @@
                         Width="21"
                         Height="21"
                         Margin="0,2,2,0"
-                        Foreground="LightBlue"
+                        Foreground="DeepSkyBlue"
                         Kind="Person" />
                     <TextBox
                         Width="120"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         materialDesign:HintAssist.Hint="{Binding Path=LoginHint}"
-                        BorderBrush="LightBlue"
+                        BorderBrush="DeepSkyBlue"
                         FontSize="16"
                         Foreground="Gray" />
                 </StackPanel>
@@ -83,14 +82,14 @@
                         Width="21"
                         Height="21"
                         Margin="0,2,2,0"
-                        Foreground="LightBlue"
+                        Foreground="DeepSkyBlue"
                         Kind="Key" />
                     <PasswordBox
                         Width="120"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         materialDesign:HintAssist.Hint="{Binding Path=PasswordHint}"
-                        BorderBrush="LightBlue"
+                        BorderBrush="DeepSkyBlue"
                         FontSize="16"
                         Foreground="Gray" />
                 </StackPanel>
@@ -113,11 +112,13 @@
                     </StackPanel>
                 </Button>
                 <Button
+                    x:Name="SignUpBtn"
                     Height="15"
                     Padding="0"
                     HorizontalAlignment="Center"
-                    Style="{StaticResource MaterialDesignFlatButton}"
-                        Cursor="Hand">
+                    Click="SignUpBtn_Click"
+                    Cursor="Hand"
+                    Style="{StaticResource MaterialDesignFlatButton}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Width="10"
