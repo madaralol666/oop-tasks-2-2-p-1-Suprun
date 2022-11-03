@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.Core;
 using WpfApp2.View.MainUserControl;
 
 namespace WpfApp2
@@ -24,8 +25,13 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
-            GridMain.Children.Clear(); 
-            GridMain.Children.Add(new LoginUC());
+            MyFrame.Frame = MainFrame;
+            MainFrame.Navigate(new LoginUC());
+        }
+
+        private void MainFrame_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

@@ -12,28 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp2.Core;
 
 namespace WpfApp2.View.MainUserControl
 {
     /// <summary>
-    /// Логика взаимодействия для LoginUC.xaml
+    /// Логика взаимодействия для LoginUserControl.xaml
     /// </summary>
-    public partial class LoginUC : UserControl
+    public partial class LoginUserControl : UserControl
     {
-        public LoginUC()
+        public LoginUserControl()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-        
-        private void SignInBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Frame.Navigate(new LoginUserControl());
         }
     }
 }

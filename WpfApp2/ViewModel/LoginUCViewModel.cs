@@ -17,7 +17,7 @@ namespace WpfApp2.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameElement));
         }
 
-        private string _loginField = "danya";
+        private string _loginField;
 
         public string LoginField
         {
@@ -38,14 +38,14 @@ namespace WpfApp2.ViewModel
                 OnPropertyChanged();
             }
         }
-        private string _loginHint = "danya2";
+        private string _loginHint = "Login";
 
         public string LoginHint
         {
             get => _loginHint;
             set { _loginHint = value; OnPropertyChanged(); }
         }
-        private string _passwordHint = "danya4";
+        private string _passwordHint = "Password";
 
         public string PasswordHint
         {
