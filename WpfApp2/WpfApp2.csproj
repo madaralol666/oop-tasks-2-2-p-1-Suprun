@@ -186,6 +186,8 @@
     <Resource Include="Images\ui-bg.jpg" />
     <Resource Include="Images\ui-bg-red.jpg" />
     <Resource Include="Images\load-photo-bg.png" />
+    <Resource Include="Images\user-image.jpeg" />
+    <Resource Include="Images\ui-bg-green.jpg" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
