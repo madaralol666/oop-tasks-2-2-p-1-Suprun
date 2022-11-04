@@ -49,6 +49,13 @@ namespace WpfApp2.ViewModel
         }
 
 
+        private string _firstNameField;
+        public string FirstNameField
+        {
+            get => _firstNameField;
+            set { _firstNameField = value; OnPropertyChanged(); }
+        }
+
         private string _lastNameField;
         public string LastNameField
         {
@@ -88,6 +95,14 @@ namespace WpfApp2.ViewModel
         {
             get => _ageHint;
             set { _ageHint = value; OnPropertyChanged(); }
+        }
+
+
+        private string _firstNameHint = "First name";
+        public string FirstNameHint
+        {
+            get => _firstNameHint;
+            set { _firstNameHint = value; OnPropertyChanged(); }
         }
 
 
