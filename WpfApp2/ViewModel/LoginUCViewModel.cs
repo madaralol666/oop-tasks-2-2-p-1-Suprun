@@ -56,6 +56,16 @@ namespace WpfApp2.ViewModel
             set { _lastNameField = value; OnPropertyChanged(); }
         }
 
+        private string _imageField = "/Images/load-photo-bg.png";
+        public string ImageField
+        {
+            get => _imageField;
+            set
+            {
+                _imageField = value;
+                OnPropertyChanged();
+            }
+        }
 
         private string _loginHint = "Login";
         public string LoginHint
