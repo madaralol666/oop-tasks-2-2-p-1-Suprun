@@ -52,7 +52,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Background="White"
-            CornerRadius="30" />
+            CornerRadius="30"
+            Effect="{StaticResource MaterialDesignElevationShadow16}" />
         <StackPanel
             Grid.Row="1"
             HorizontalAlignment="Center"
