@@ -5,8 +5,103 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfApp2.View.MainUserControl"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    FontFamily="Arial Rounded MT Bold"
     mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="/Images/ui-bg-green.jpg"
+               Grid.RowSpan="2"
+               Stretch="UniformToFill"/>
+
+        <!--ЧТО ДЕЛАТЬ? Binding Path kak?-->
+        <Border
+            Width="150"
+            Height="40"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#FFF6F8F4"
+            CornerRadius="20">
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="25"
+                Foreground="#FF7BCE49"
+                Text="PROFILE" />
+        </Border>
+        <Button
+            Grid.Row="0"
+            Margin="0,5,0,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="Button_Click"
+            Style="{StaticResource MaterialDesignIconButton}">
+            <materialDesign:PackIcon Foreground="White" Kind="Close" />
+        </Button>
+        <Border Grid.Row="1"
+                Background="White"
+                Width="400"
+                Height="280"
+                CornerRadius="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            
+        </Border>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Vertical"
+                    Grid.Row="1">
+            <Border CornerRadius="80"
+                    Grid.Row="1"
+                    Width="120"
+                    Height="120"
+                    Effect="{StaticResource MaterialDesignElevationShadow6}">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Images/user-image.jpeg"
+                                Stretch="UniformToFill"/>
+                </Border.Background>
+            </Border>
+
+            <TextBlock Text="Login"
+                       Margin="0 5 0 5"
+                       FontWeight="Bold"
+                       FontSize="14"/>
+            <TextBlock Text="Name LastName"
+                       Margin="0 0 0 5"/>
+            <TextBlock Text="Age"
+                       Margin="0 0 0 5"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 5 0 0">
+                <materialDesign:PackIcon Kind="Clock"
+                                         Margin="0 0 2 0"/>
+                <TextBlock Text="RegistrationDate"/>
+            </StackPanel>
+            <Button
+                    Width="100"
+                    Height="18"
+                    Margin="0,6,0,1"
+                    Padding="0"
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Logout"
+                                             Margin="0 2 0 0"
+                                             Foreground="#FF7BCE49"/>
+                    <TextBlock
+                            Margin="2,1,0,0"
+                            VerticalAlignment="Center"
+                            Foreground="#FF7BCE49"
+                            FontSize="15"
+                            Text="SIGN OUT" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
 </UserControl>

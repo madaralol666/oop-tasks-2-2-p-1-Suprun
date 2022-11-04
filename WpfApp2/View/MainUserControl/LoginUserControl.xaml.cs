@@ -24,5 +24,10 @@ namespace WpfApp2.View.MainUserControl
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
     }
 }
