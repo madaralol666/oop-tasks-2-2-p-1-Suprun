@@ -40,8 +40,17 @@ namespace WpfApp2.View.MainUserControl
 
         private void Border_Drop(object sender, DragEventArgs e)
         {
-            string[] photo = (string[])e.Data.GetData(DataFormats.FileDrop);
-            borderProfileImage.ImageSource = new BitmapImage(new Uri($"{photo[0]}", UriKind.Relative));
+            try
+            {
+                string[] photo = (string[])e.Data.GetData(DataFormats.FileDrop);
+                borderProfileImage.ImageSource = new BitmapImage(new Uri($"{photo[0]}", UriKind.Relative));
+                photo = null;
+            }
+            catch (Exception)
+            {
+                return;
+            }
+            
         }
     }
 }
