@@ -167,6 +167,7 @@
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Resource Include="Fonts\azonix.ttf" />
+    <Resource Include="Fonts\arialroundedmtbold.ttf" />
     <None Include="Model\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
