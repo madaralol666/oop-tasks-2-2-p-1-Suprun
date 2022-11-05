@@ -188,6 +188,7 @@
     <Resource Include="Images\load-photo-bg.png" />
     <Resource Include="Images\user-image.jpeg" />
     <Resource Include="Images\ui-bg-green.jpg" />
+    <Resource Include="Images\Noobas-logo.png" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

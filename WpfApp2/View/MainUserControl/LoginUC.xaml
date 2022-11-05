@@ -39,7 +39,14 @@
                 Foreground="DeepSkyBlue"
                 Text="AUTH" />
         </Border>
-
+        <Image
+            Grid.Row="0"
+            Width="60"
+            Height="50"
+            Margin="9"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/Noobas-logo.png" />
         <Button
             Grid.Row="0"
             Margin="0,5,0,0"

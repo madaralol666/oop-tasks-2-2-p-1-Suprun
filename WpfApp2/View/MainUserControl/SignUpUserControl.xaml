@@ -48,6 +48,14 @@
                 Foreground="#FFC27889"
                 Text="SIGN UP" />
         </Border>
+        <Image
+            Margin="9"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/Noobas-logo.png"
+            Width="60"
+            Height="50"/>
         <Border
             Grid.Row="1"
             Width="400"
