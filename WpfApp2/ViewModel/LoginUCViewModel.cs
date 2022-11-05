@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WpfApp2.ViewModel
 {
@@ -61,17 +57,6 @@ namespace WpfApp2.ViewModel
         {
             get => _lastNameField;
             set { _lastNameField = value; OnPropertyChanged(); }
-        }
-
-        private string _imageField = "/Images/load-photo-bg.png";
-        public string ImageField
-        {
-            get => _imageField;
-            set
-            {
-                _imageField = value;
-                OnPropertyChanged();
-            }
         }
 
         private string _loginHint = "Login";

@@ -49,13 +49,13 @@
                 Text="SIGN UP" />
         </Border>
         <Image
-            Margin="9"
             Grid.Row="0"
+            Width="60"
+            Height="50"
+            Margin="9"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Source="/Images/Noobas-logo.png"
-            Width="60"
-            Height="50"/>
+            Source="/Images/Noobas-logo.png" />
         <Border
             Grid.Row="1"
             Width="400"
@@ -93,7 +93,8 @@
                             materialDesign:TextFieldAssist.UnderlineBrush="PaleVioletRed"
                             BorderBrush="#FFC27889"
                             FontSize="16"
-                            Foreground="Gray" />
+                            Foreground="Gray"
+                            Text="{Binding Path=LoginField}" />
                     </StackPanel>
                     <StackPanel Margin="23,5,0,0" Orientation="Horizontal">
                         <TextBox
@@ -104,7 +105,8 @@
                             materialDesign:TextFieldAssist.UnderlineBrush="PaleVioletRed"
                             BorderBrush="#FFC27889"
                             FontSize="16"
-                            Foreground="Gray" />
+                            Foreground="Gray"
+                            Text="{Binding Path=FirstNameField}" />
                     </StackPanel>
 
                     <StackPanel Margin="23,5,0,0" Orientation="Horizontal">
@@ -116,7 +118,8 @@
                             materialDesign:TextFieldAssist.UnderlineBrush="PaleVioletRed"
                             BorderBrush="#FFC27889"
                             FontSize="16"
-                            Foreground="Gray" />
+                            Foreground="Gray"
+                            Text="{Binding Path=LastNameField}" />
                     </StackPanel>
 
 
@@ -136,7 +139,8 @@
                             materialDesign:TextFieldAssist.UnderlineBrush="PaleVioletRed"
                             BorderBrush="#FFC27889"
                             FontSize="16"
-                            Foreground="Gray" />
+                            Foreground="Gray"
+                            Text="{Binding Path=AgeField}" />
                     </StackPanel>
                     <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
                         <materialDesign:PackIcon
@@ -177,7 +181,7 @@
                     <Border.Background>
                         <ImageBrush
                             x:Name="borderProfileImage"
-                            ImageSource="{Binding Path=ImageField}"
+                            ImageSource="/Images/load-photo-bg.png"
                             Stretch="UniformToFill" />
                     </Border.Background>
                 </Border>
@@ -188,12 +192,13 @@
                     VerticalAlignment="Top"
                     Orientation="Vertical">
                     <Button
-                        x:Name="SignUnBtn"
+                        x:Name="SignUpBtn"
                         Width="87"
                         Height="18"
                         Margin="0,0,0,1"
                         Padding="0"
                         HorizontalAlignment="Center"
+                        Click="SignUpBtn_Click"
                         Style="{StaticResource MaterialDesignFlatSecondaryLightButton}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon

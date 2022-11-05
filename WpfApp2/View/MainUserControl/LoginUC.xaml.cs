@@ -36,7 +36,7 @@ namespace WpfApp2.View.MainUserControl
         
         private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.Frame.Navigate(new LoginUserControl());
+            MyFrame.Frame.Navigate(new LoginUserControl(viewModel));
         }
 
         private void SignUpBtn_Click(object sender, RoutedEventArgs e)

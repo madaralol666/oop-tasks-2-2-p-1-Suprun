@@ -6,10 +6,14 @@
     xmlns:local="clr-namespace:WpfApp2.View.MainUserControl"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:WpfApp2.ViewModel"
     d:DesignHeight="450"
     d:DesignWidth="800"
     FontFamily="Arial Rounded MT Bold"
     mc:Ignorable="d">
+    <UserControl.Resources>
+        <viewmodel:LoginUCViewModel x:Key="viewModel" />
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
@@ -50,7 +54,8 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Style="{StaticResource MaterialDesignIconForegroundButton}">
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+                Cursor="Hand">
             <materialDesign:PackIcon Foreground="White" Kind="Close" />
         </Button>
         <Border
@@ -74,23 +79,23 @@
                 CornerRadius="80"
                 Effect="{StaticResource MaterialDesignElevationShadow6}">
                 <Border.Background>
-                    <ImageBrush ImageSource="/Images/user-image.jpeg" Stretch="UniformToFill" />
+                    <ImageBrush ImageSource="/Images/load-photo-bg.png" Stretch="UniformToFill" />
                 </Border.Background>
             </Border>
 
             <TextBlock
-                Margin="0,5,0,5"
+                Margin="0,8,0,5"
                 FontSize="14"
                 FontWeight="Bold"
-                Text="Login" />
-            <TextBlock Margin="0,0,0,5" Text="Name LastName" />
-            <TextBlock Margin="0,0,0,5" Text="Age" />
-            <StackPanel
-                Margin="0,5,0,0"
-                HorizontalAlignment="Center"
-                Orientation="Horizontal">
+                Text="{Binding Path=LoginField, StringFormat=\@{0}}" />
+            <TextBlock Margin="0,0,0,5">
+                <Run Text="{Binding Path=FirstNameField}" />
+                <Run Text="{Binding Path=LastNameField}" />
+            </TextBlock>
+            <TextBlock Margin="0,0,0,5" Text="{Binding Path=AgeField, StringFormat=Age: {0}}" />
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <materialDesign:PackIcon Margin="0,0,2,0" Kind="Clock" />
-                <TextBlock Text="RegistrationDate" />
+                <TextBlock Margin="0,1,0,0" Text="RegistrationDate" />
             </StackPanel>
             <Button
                 x:Name="SignOutBtn"

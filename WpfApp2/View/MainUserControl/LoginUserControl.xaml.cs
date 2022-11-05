@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp2.Core;
+using WpfApp2.ViewModel;
 
 namespace WpfApp2.View.MainUserControl
 {
@@ -21,14 +22,15 @@ namespace WpfApp2.View.MainUserControl
     /// </summary>
     public partial class LoginUserControl : UserControl
     {
-        public LoginUserControl()
+        public LoginUserControl(LoginUCViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.Shutdown();
+            Application.Current.Shutdown();
         }
 
         private void SignOutBtn_Click(object sender, RoutedEventArgs e)

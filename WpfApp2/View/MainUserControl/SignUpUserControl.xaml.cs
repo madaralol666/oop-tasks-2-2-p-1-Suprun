@@ -13,10 +13,12 @@ namespace WpfApp2.View.MainUserControl
     /// </summary>
     public partial class SignUpUserControl : UserControl
     {
+        private LoginUCViewModel ViewModel = null;
         public SignUpUserControl(LoginUCViewModel viewModel)
         {
             InitializeComponent();
             DataContext = viewModel;
+            ViewModel = viewModel;
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
@@ -41,7 +43,6 @@ namespace WpfApp2.View.MainUserControl
             {
                 return;
             }
-            
         }
 
         private void loadPictureBtn_Click(object sender, RoutedEventArgs e)
@@ -51,6 +52,11 @@ namespace WpfApp2.View.MainUserControl
             openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg";
             if (openFileDialog.ShowDialog() == true)
                 borderProfileImage.ImageSource = new BitmapImage(new Uri($"{openFileDialog.FileName}", UriKind.Relative));
+        }
+
+        private void SignUpBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Frame.Navigate(new LoginUserControl(ViewModel));
         }
     }
 }
