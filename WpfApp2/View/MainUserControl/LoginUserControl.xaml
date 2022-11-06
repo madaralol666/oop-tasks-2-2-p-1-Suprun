@@ -25,7 +25,6 @@
             Source="/Images/ui-bg-green.jpg"
             Stretch="UniformToFill" />
 
-        <!--  ЧТО ДЕЛАТЬ? Binding Path kak?  -->
         <Border
             Width="150"
             Height="40"

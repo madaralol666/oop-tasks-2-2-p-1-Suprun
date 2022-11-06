@@ -17,10 +17,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="330" />
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image
-            Grid.RowSpan="2"
+            Grid.RowSpan="3"
             Source="/Images/ui-bg-red.jpg"
             Stretch="UniformToFill" />
         <Button
@@ -250,6 +251,19 @@
                         Visibility="Hidden" />
                 </StackPanel>
             </Grid>
+        </Border>
+        <Border Grid.Row="2"
+                Width="300"
+                Height="50">
+            <materialDesign:Snackbar x:Name="MDSSnackbarUnsavedChanges"
+                                 Grid.Row="2"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Bottom">
+                <materialDesign:SnackbarMessage x:Name="MDSSnackbarMessage"
+                                            Content="Сохранить изменения?"
+                                            ActionContent="ОТМНА"
+                                            ActionClick="MDSSnackbarMessage_ActionClick"/>
+            </materialDesign:Snackbar>
         </Border>
     </Grid>
 </UserControl>
