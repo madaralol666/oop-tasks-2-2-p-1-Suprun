@@ -49,7 +49,7 @@ namespace WpfApp2.View.MainUserControl
                     timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
                     timer.Start();
                     MDSSnackbarUnsavedChanges.IsActive = true;
-                    MDSSnackbarMessage.Content = "Fiil the fields";
+                    MDSSnackbarMessage.Content = "Wrong data! Please try again.";
                     MDSSnackbarMessage.ActionContent = "OK!";
                     return;
                 }
@@ -69,7 +69,7 @@ namespace WpfApp2.View.MainUserControl
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            wrongDataTextBlock.Visibility = Visibility.Hidden;
+            MDSSnackbarUnsavedChanges.IsActive = false;
         }
 
         private void MDSSnackbarMessage_ActionClick(object sender, RoutedEventArgs e)
