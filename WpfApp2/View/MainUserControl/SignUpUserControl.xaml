@@ -40,7 +40,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Background="#FFF4F6F8"
-            CornerRadius="20">
+            CornerRadius="20"
+            Effect="{StaticResource MaterialDesignElevationShadow3}">
             <TextBlock
                 Grid.Row="0"
                 HorizontalAlignment="Center"

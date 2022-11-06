@@ -31,7 +31,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Background="#FFF6F8F4"
-            CornerRadius="20">
+            CornerRadius="20"
+            Effect="{StaticResource MaterialDesignElevationShadow3}">
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"

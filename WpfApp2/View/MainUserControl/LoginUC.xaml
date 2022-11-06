@@ -26,6 +26,7 @@
             Source="/Images/ui-bg.jpg"
             Stretch="UniformToFill" />
         <Border
+            Effect="{StaticResource MaterialDesignElevationShadow3}"
             Width="110"
             Height="40"
             HorizontalAlignment="Center"
