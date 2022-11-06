@@ -7,16 +7,16 @@
       <Schema Namespace="Хранилище AuthDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Users">
           <Key>
-            <PropertyRef Name="UserId" />
+            <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserLogin" Type="varchar" MaxLength="30" />
-          <Property Name="UserFirstName" Type="varchar" MaxLength="30" />
-          <Property Name="UserLastName" Type="varchar" MaxLength="30" />
-          <Property Name="UserPassword" Type="varchar" MaxLength="30" />
-          <Property Name="UserAge" Type="varchar" MaxLength="10" />
-          <Property Name="UserProfileImage" Type="image" />
-          <Property Name="UserRegistrationDate" Type="varchar" MaxLength="20" />
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserLogin" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFirstName" Type="nvarchar(max)" />
+          <Property Name="UserLastName" Type="nvarchar(max)" />
+          <Property Name="UserPassword" Type="nvarchar(max)" />
+          <Property Name="UserAge" Type="nvarchar(max)" />
+          <Property Name="UserProfileImage" Type="nvarchar(max)" />
+          <Property Name="UserRegistrationDate" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="Хранилище AuthDBModelContainer">
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -28,16 +28,16 @@
       <Schema Namespace="AuthDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="User">
           <Key>
-            <PropertyRef Name="UserId" />
+            <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserLogin" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="UserFirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="UserLastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="UserPassword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="UserAge" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="UserProfileImage" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="UserRegistrationDate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserProfileImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserRegistrationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="AuthDBEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -51,7 +51,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="AuthDBModel.User">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
                 <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
                 <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />

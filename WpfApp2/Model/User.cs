@@ -14,13 +14,13 @@ namespace WpfApp2.Model
     
     public partial class User
     {
-        public int UserId { get; set; }
+        public int UserID { get; set; }
         public string UserLogin { get; set; }
         public string UserFirstName { get; set; }
         public string UserLastName { get; set; }
         public string UserPassword { get; set; }
         public string UserAge { get; set; }
-        public byte[] UserProfileImage { get; set; }
+        public string UserProfileImage { get; set; }
         public string UserRegistrationDate { get; set; }
     }
 }

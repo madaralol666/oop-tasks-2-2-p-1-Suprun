@@ -187,7 +187,7 @@
                     <Border.Background>
                         <ImageBrush
                             x:Name="borderProfileImage"
-                            ImageSource="/Images/load-photo-bg.png"
+                            ImageSource="{Binding Path=ImagePath}"
                             Stretch="UniformToFill" />
                     </Border.Background>
                 </Border>
@@ -243,7 +243,7 @@
                     </Button>
                     <TextBlock
                         x:Name="wrongDataTextBlock"
-                        Margin="3,10,0,0"
+                        Margin="15,10,0,0"
                         HorizontalAlignment="Center"
                         FontSize="9"
                         Foreground="Red"
