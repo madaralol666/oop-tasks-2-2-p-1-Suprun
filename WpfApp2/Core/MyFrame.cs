@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using WpfApp2.Model;
 
 namespace WpfApp2.Core
 {
@@ -11,6 +12,6 @@ namespace WpfApp2.Core
     {
         public static Frame Frame { get; set; }
 
-        //public static Task1DBEntities DB { get; set; }
+        public static AuthDBEntities3 DB { get; set; }
     }
 }

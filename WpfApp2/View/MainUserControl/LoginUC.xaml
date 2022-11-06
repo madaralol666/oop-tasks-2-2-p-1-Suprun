@@ -75,6 +75,7 @@
                         Foreground="DeepSkyBlue"
                         Kind="Person" />
                     <TextBox
+                        x:Name="LoginTextBox"
                         Width="120"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
@@ -93,6 +94,7 @@
                         Foreground="DeepSkyBlue"
                         Kind="Key" />
                     <PasswordBox
+                        x:Name="PasswordPasswordBox"
                         Width="120"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"

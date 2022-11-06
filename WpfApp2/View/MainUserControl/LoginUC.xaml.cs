@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp2.Core;
+using WpfApp2.Model;
 using WpfApp2.ViewModel;
 
 namespace WpfApp2.View.MainUserControl
@@ -36,7 +37,31 @@ namespace WpfApp2.View.MainUserControl
         
         private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.Frame.Navigate(new LoginUserControl(viewModel));
+            try
+            {
+
+                User userModel = MyFrame.DB.Users.FirstOrDefault(u => u.UserLogin == LoginTextBox.Text && u.UserPassword == PasswordPasswordBox.Password);
+
+                if (userModel == null)
+                {
+                    MessageBox.Show("Неверные данные",
+                                    "Ошибка",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Error);
+                }
+                else
+                {
+                    MyFrame.Frame.Navigate(new LoginUserControl(viewModel));
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString(),
+                                   "Системное сообщение",
+                                   MessageBoxButton.OK,
+                                   MessageBoxImage.Error);
+            }
         }
 
         private void SignUpBtn_Click(object sender, RoutedEventArgs e)

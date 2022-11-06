@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp2.Core;
+using WpfApp2.Model;
 using WpfApp2.View.MainUserControl;
 
 namespace WpfApp2
@@ -27,6 +28,7 @@ namespace WpfApp2
             InitializeComponent();
             MyFrame.Frame = MainFrame;
             MainFrame.Navigate(new LoginUC());
+            MyFrame.DB = new AuthDBEntities3();
         }
 
         private void MainFrame_MouseDown(object sender, MouseButtonEventArgs e)
