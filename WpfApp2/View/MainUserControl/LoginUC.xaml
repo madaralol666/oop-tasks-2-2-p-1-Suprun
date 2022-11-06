@@ -159,11 +159,7 @@
                 Grid.Row="2"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom">
-                <materialDesign:SnackbarMessage
-                    x:Name="MDSSnackbarMessage"
-                    ActionClick="MDSSnackbarMessage_ActionClick"
-                    ActionContent=""
-                    Content="" />
+                <materialDesign:SnackbarMessage x:Name="MDSSnackbarMessage" ActionClick="MDSSnackbarMessage_ActionClick" />
             </materialDesign:Snackbar>
         </Border>
     </Grid>

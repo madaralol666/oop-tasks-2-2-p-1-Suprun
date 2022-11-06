@@ -46,19 +46,20 @@ namespace WpfApp2.View.MainUserControl
                 if (userModel == null)
                 {
                     timer.Tick += new EventHandler(timer_Tick);
-                    timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
+                    timer.Interval = new TimeSpan(0, 0, 0, 0, 1500);
                     timer.Start();
                     MDSSnackbarUnsavedChanges.IsActive = true;
                     MDSSnackbarMessage.Content = "Wrong data! Please try again.";
-                    MDSSnackbarMessage.ActionContent = "OK!";
                     return;
                 }
                 else
                     MyFrame.Frame.Navigate(new LoginUserControl(viewModel));
+                    
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
         }
 

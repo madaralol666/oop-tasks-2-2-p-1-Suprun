@@ -93,18 +93,16 @@ namespace WpfApp2.View.MainUserControl
                 else
                 {
                     timer.Tick += new EventHandler(timer_Tick);
-                    timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
+                    timer.Interval = new TimeSpan(0, 0, 0, 0, 1500);
                     timer.Start();
                     MDSSnackbarUnsavedChanges.IsActive = true;
-                    MDSSnackbarMessage.Content = "Fill the fields";
-                    MDSSnackbarMessage.ActionContent = "OK!";
+                    MDSSnackbarMessage.Content = "Fill the fields!";
                     return;
                 }
             }
             catch (Exception)
             {
-
-                throw;
+                return;
             }
         }
         private void timer_Tick(object sender, EventArgs e)

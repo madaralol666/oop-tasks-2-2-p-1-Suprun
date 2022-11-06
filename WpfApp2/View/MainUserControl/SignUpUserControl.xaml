@@ -18,7 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
             <RowDefinition Height="330" />
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Image
             Grid.RowSpan="3"
@@ -241,28 +241,19 @@
                                 TextDecorations="Underline" />
                         </StackPanel>
                     </Button>
-                    <TextBlock
-                        x:Name="wrongDataTextBlock"
-                        Margin="15,10,0,0"
-                        HorizontalAlignment="Center"
-                        FontSize="9"
-                        Foreground="Red"
-                        Text="Fill the gapes."
-                        Visibility="Hidden" />
                 </StackPanel>
             </Grid>
         </Border>
-        <Border Grid.Row="2"
-                Width="300"
-                Height="50">
-            <materialDesign:Snackbar x:Name="MDSSnackbarUnsavedChanges"
-                                 Grid.Row="2"
-                                 HorizontalAlignment="Stretch"
-                                 VerticalAlignment="Bottom">
-                <materialDesign:SnackbarMessage x:Name="MDSSnackbarMessage"
-                                            Content="Сохранить изменения?"
-                                            ActionContent="ОТМНА"
-                                            ActionClick="MDSSnackbarMessage_ActionClick"/>
+        <Border
+            Grid.Row="2"
+            Width="300"
+            Height="50">
+            <materialDesign:Snackbar
+                x:Name="MDSSnackbarUnsavedChanges"
+                Grid.Row="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom">
+                <materialDesign:SnackbarMessage x:Name="MDSSnackbarMessage" ActionClick="MDSSnackbarMessage_ActionClick" />
             </materialDesign:Snackbar>
         </Border>
     </Grid>
