@@ -100,12 +100,12 @@
                 x:Name="AgeTB"
                 Margin="0,0,0,5"
                 Text="{Binding Path=AgeField, StringFormat=Age: {0}}" />
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                 <materialDesign:PackIcon Margin="0,0,2,0" Kind="Clock" />
                 <TextBlock
                     x:Name="RegisterDateTB"
-                    Margin="0,1,0,0"
-                    Text="RegistrationDate" />
+                    Margin="0,2,0,0"
+                    Text="{Binding Path=RegisterDateField}" />
             </StackPanel>
             <Button
                 x:Name="SignOutBtn"
@@ -115,6 +115,7 @@
                 Padding="0"
                 HorizontalAlignment="Center"
                 Click="SignOutBtn_Click"
+                Cursor="Hand"
                 Style="{StaticResource MaterialDesignFlatButton}">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon

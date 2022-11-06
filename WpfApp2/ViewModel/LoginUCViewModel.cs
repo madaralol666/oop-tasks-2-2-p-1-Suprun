@@ -59,6 +59,13 @@ namespace WpfApp2.ViewModel
             set { _lastNameField = value; OnPropertyChanged(); }
         }
 
+        private string _registerDateField;
+        public string RegisterDateField
+        {
+            get => _registerDateField;
+            set { _registerDateField = value; OnPropertyChanged(); }
+        }
+
         private string _loginHint = "Login";
         public string LoginHint
         {

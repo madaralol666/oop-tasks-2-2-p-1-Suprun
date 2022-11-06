@@ -75,10 +75,9 @@ namespace WpfApp2.View.MainUserControl
             try
             {
                 if(IsTextBoxNotEmpty(LoginTB, FirstNameTB, LastNameTB, AgeTB) 
-                    && PasswordPB.Password.Trim() != String.Empty 
-                    && borderProfileImage.ImageSource != new BitmapImage(new Uri("/Images/load-photo-bg.png", UriKind.Relative)))
+                    && PasswordPB.Password.Trim() != String.Empty)
                 {
-                    //byte[] image = File.ReadAllBytes(borderProfileImage.ImageSource.ToString());
+                    //byte[] image = ;
                     MyFrame.DB.Users.Add(new User
                     {
                         UserLogin = LoginTB.Text,
@@ -100,8 +99,6 @@ namespace WpfApp2.View.MainUserControl
                     wrongDataTextBlock.Visibility = Visibility.Visible;
                     return;
                 }
-                
-                //MessageBox.Show("За дело бирйотся мясник", "Системное мясо", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception)
             {
