@@ -46,9 +46,11 @@ namespace WpfApp2.View.MainUserControl
                 if (userModel == null)
                 {
                     timer.Tick += new EventHandler(timer_Tick);
-                    timer.Interval = new TimeSpan(0, 0, 0, 0, 700);
+                    timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
                     timer.Start();
-                    wrongDataTextBlock.Visibility = Visibility.Visible;
+                    MDSSnackbarUnsavedChanges.IsActive = true;
+                    MDSSnackbarMessage.Content = "Fiil the fields";
+                    MDSSnackbarMessage.ActionContent = "OK!";
                     return;
                 }
                 else
@@ -68,6 +70,11 @@ namespace WpfApp2.View.MainUserControl
         private void timer_Tick(object sender, EventArgs e)
         {
             wrongDataTextBlock.Visibility = Visibility.Hidden;
+        }
+
+        private void MDSSnackbarMessage_ActionClick(object sender, RoutedEventArgs e)
+        {
+            MDSSnackbarUnsavedChanges.IsActive = false;
         }
     }
 }

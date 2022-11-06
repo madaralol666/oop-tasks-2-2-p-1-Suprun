@@ -260,8 +260,9 @@
                                  HorizontalAlignment="Stretch"
                                  VerticalAlignment="Bottom">
                 <materialDesign:SnackbarMessage x:Name="MDSSnackbarMessage"
-                                            Content="Сохранить изменения?"
-                                            ActionContent="ОТМНА"
+                                            Content=""
+                                            ActionContent=""
+                                            Background="Blue"
                                             ActionClick="MDSSnackbarMessage_ActionClick"/>
             </materialDesign:Snackbar>
         </Border>
