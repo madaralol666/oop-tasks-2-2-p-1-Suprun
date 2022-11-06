@@ -66,6 +66,18 @@ namespace WpfApp2.ViewModel
             set { _registerDateField = value; OnPropertyChanged(); }
         }
 
+        private string _imagePath = "/Images/load-photo-bg.png";
+        public string ImagePath
+        {
+            get => _imagePath;
+            set
+            {
+                _imagePath = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         private string _loginHint = "Login";
         public string LoginHint
         {

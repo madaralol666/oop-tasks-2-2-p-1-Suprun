@@ -77,7 +77,6 @@ namespace WpfApp2.View.MainUserControl
                 if(IsTextBoxNotEmpty(LoginTB, FirstNameTB, LastNameTB, AgeTB) 
                     && PasswordPB.Password.Trim() != String.Empty)
                 {
-                    //byte[] image = ;
                     MyFrame.DB.Users.Add(new User
                     {
                         UserLogin = LoginTB.Text,
@@ -85,7 +84,7 @@ namespace WpfApp2.View.MainUserControl
                         UserLastName = LastNameTB.Text,
                         UserAge = AgeTB.Text,
                         UserPassword = PasswordPB.Password,
-                        //UserProfileImage = image,
+                        UserProfileImage = borderProfileImage.ImageSource.ToString(),
                         UserRegistrationDate = DateTime.Now.ToString()
                     });
                     MyFrame.DB.SaveChanges();
