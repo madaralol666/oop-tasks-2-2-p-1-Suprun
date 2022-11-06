@@ -54,8 +54,8 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Style="{StaticResource MaterialDesignIconForegroundButton}"
-                Cursor="Hand">
+            Cursor="Hand"
+            Style="{StaticResource MaterialDesignIconForegroundButton}">
             <materialDesign:PackIcon Foreground="White" Kind="Close" />
         </Button>
         <Border
@@ -79,23 +79,33 @@
                 CornerRadius="80"
                 Effect="{StaticResource MaterialDesignElevationShadow6}">
                 <Border.Background>
-                    <ImageBrush ImageSource="/Images/load-photo-bg.png" Stretch="UniformToFill" />
+                    <ImageBrush
+                        x:Name="borderProfileImage"
+                        ImageSource="/Images/load-photo-bg.png"
+                        Stretch="UniformToFill" />
                 </Border.Background>
             </Border>
 
             <TextBlock
+                x:Name="LoginTB"
                 Margin="0,8,0,5"
                 FontSize="14"
                 FontWeight="Bold"
                 Text="{Binding Path=LoginField, StringFormat=\@{0}}" />
             <TextBlock Margin="0,0,0,5">
-                <Run Text="{Binding Path=FirstNameField}" />
-                <Run Text="{Binding Path=LastNameField}" />
+                <Run x:Name="FirstNameRun" Text="{Binding Path=FirstNameField}" />
+                <Run x:Name="LastNameRun" Text="{Binding Path=LastNameField}" />
             </TextBlock>
-            <TextBlock Margin="0,0,0,5" Text="{Binding Path=AgeField, StringFormat=Age: {0}}" />
+            <TextBlock
+                x:Name="AgeTB"
+                Margin="0,0,0,5"
+                Text="{Binding Path=AgeField, StringFormat=Age: {0}}" />
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <materialDesign:PackIcon Margin="0,0,2,0" Kind="Clock" />
-                <TextBlock Margin="0,1,0,0" Text="RegistrationDate" />
+                <TextBlock
+                    x:Name="RegisterDateTB"
+                    Margin="0,1,0,0"
+                    Text="RegistrationDate" />
             </StackPanel>
             <Button
                 x:Name="SignOutBtn"

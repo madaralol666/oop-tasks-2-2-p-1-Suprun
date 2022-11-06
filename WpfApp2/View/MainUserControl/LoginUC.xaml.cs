@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using WpfApp2.Core;
 using WpfApp2.Model;
 using WpfApp2.ViewModel;
@@ -24,6 +25,7 @@ namespace WpfApp2.View.MainUserControl
     public partial class LoginUC : UserControl
     {
         private LoginUCViewModel viewModel = null;
+        DispatcherTimer timer = new DispatcherTimer();
         public LoginUC()
         {
             InitializeComponent();
@@ -39,34 +41,33 @@ namespace WpfApp2.View.MainUserControl
         {
             try
             {
-
                 User userModel = MyFrame.DB.Users.FirstOrDefault(u => u.UserLogin == LoginTextBox.Text && u.UserPassword == PasswordPasswordBox.Password);
 
                 if (userModel == null)
                 {
-                    MessageBox.Show("Неверные данные",
-                                    "Ошибка",
-                                    MessageBoxButton.OK,
-                                    MessageBoxImage.Error);
+                    timer.Tick += new EventHandler(timer_Tick);
+                    timer.Interval = new TimeSpan(0, 0, 0, 0, 700);
+                    timer.Start();
+                    wrongDataTextBlock.Visibility = Visibility.Visible;
+                    return;
                 }
                 else
-                {
                     MyFrame.Frame.Navigate(new LoginUserControl(viewModel));
-                }
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.ToString(),
-                                   "Системное сообщение",
-                                   MessageBoxButton.OK,
-                                   MessageBoxImage.Error);
+                MessageBox.Show(ex.ToString(), "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void SignUpBtn_Click(object sender, RoutedEventArgs e)
         {
             MyFrame.Frame.Navigate(new SignUpUserControl(viewModel));
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            wrongDataTextBlock.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -66,7 +66,10 @@
             Background="#FFF4F6F8"
             CornerRadius="30"
             Effect="{StaticResource MaterialDesignElevationShadow16}">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon
                         Width="21"
@@ -144,6 +147,14 @@
                             TextDecorations="Underline" />
                     </StackPanel>
                 </Button>
+                <TextBlock
+                    x:Name="wrongDataTextBlock"
+                    Margin="3,10,0,0"
+                    HorizontalAlignment="Center"
+                    FontSize="9"
+                    Foreground="Red"
+                    Text="Wrong data. Please try again."
+                    Visibility="Hidden" />
             </StackPanel>
 
         </Border>

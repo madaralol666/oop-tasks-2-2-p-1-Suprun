@@ -86,6 +86,7 @@
                             Foreground="#FFC27889"
                             Kind="Person" />
                         <TextBox
+                            x:Name="LoginTB"
                             Width="120"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -98,6 +99,7 @@
                     </StackPanel>
                     <StackPanel Margin="23,5,0,0" Orientation="Horizontal">
                         <TextBox
+                            x:Name="FirstNameTB"
                             Width="120"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -111,6 +113,7 @@
 
                     <StackPanel Margin="23,5,0,0" Orientation="Horizontal">
                         <TextBox
+                            x:Name="LastNameTB"
                             Width="120"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -132,6 +135,7 @@
                             Foreground="#FFC27889"
                             Kind="Calendar" />
                         <TextBox
+                            x:Name="AgeTB"
                             Width="120"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -150,6 +154,7 @@
                             Foreground="#FFC27889"
                             Kind="Key" />
                         <PasswordBox
+                            x:Name="PasswordPB"
                             Width="120"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
@@ -235,6 +240,14 @@
                                 TextDecorations="Underline" />
                         </StackPanel>
                     </Button>
+                    <TextBlock
+                        x:Name="wrongDataTextBlock"
+                        Margin="3,10,0,0"
+                        HorizontalAlignment="Center"
+                        FontSize="9"
+                        Foreground="Red"
+                        Text="Fill the gapes."
+                        Visibility="Hidden" />
                 </StackPanel>
             </Grid>
         </Border>

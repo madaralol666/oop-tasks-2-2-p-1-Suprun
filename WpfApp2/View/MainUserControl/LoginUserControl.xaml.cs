@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace WpfApp2.View.MainUserControl
         {
             InitializeComponent();
             DataContext = viewModel;
+            LoginTB.Text = $"@{viewModel.LoginField}";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
