@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using WpfApp2.Core;
@@ -23,6 +24,11 @@ namespace WpfApp2.View.MainUserControl
             InitializeComponent();
             DataContext = viewModel;
             ViewModel = viewModel;
+            this.AgeTB.PreviewTextInput += new TextCompositionEventHandler(textBox_PreviewTextInput);
+        }
+        void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!Char.IsDigit(e.Text, 0)) e.Handled = true;
         }
         public bool IsTextBoxNotEmpty(params TextBox[] textBoxes)
         {

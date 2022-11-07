@@ -17,11 +17,12 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
+            <RowDefinition Height="330" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Image
-            Grid.RowSpan="2"
+            Grid.RowSpan="3"
             Source="/Images/ui-bg-green.jpg"
             Stretch="UniformToFill" />
 
@@ -131,5 +132,17 @@
                 </StackPanel>
             </Button>
         </StackPanel>
+        <Border
+            Grid.Row="2"
+            Width="300"
+            Height="50">
+            <materialDesign:Snackbar
+                x:Name="MDSSnackbarUnsavedChanges"
+                Grid.Row="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom">
+                <materialDesign:SnackbarMessage x:Name="MDSSnackbarMessage" />
+            </materialDesign:Snackbar>
+        </Border>
     </Grid>
 </UserControl>

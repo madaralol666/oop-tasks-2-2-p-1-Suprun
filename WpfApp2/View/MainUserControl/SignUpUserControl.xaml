@@ -142,10 +142,12 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             materialDesign:HintAssist.Hint="{Binding Path=AgeHint}"
+                            materialDesign:TextFieldAssist.CharacterCounterVisibility="Hidden"
                             materialDesign:TextFieldAssist.UnderlineBrush="PaleVioletRed"
                             BorderBrush="#FFC27889"
                             FontSize="16"
                             Foreground="Gray"
+                            MaxLength="3"
                             Text="{Binding Path=AgeField}" />
                     </StackPanel>
                     <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
